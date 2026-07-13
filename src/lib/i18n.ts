@@ -290,7 +290,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Home Hero
     "home.hero.subtitle": "DeepGok",
     "home.hero.title1": "Sonsuz Derinlik.",
-    "home.hero.title2": "Sonsuz Olasılık."
+    "home.hero.title2": "Sonsuz Olasılık.",
     "home.hero.description":
       "Akıllı yazılımlar, yapay zeka destekli araçlar ve dijital deneyimler üreterek teknolojiyi herkes için daha basit hale getiriyoruz.",
     "home.hero.cta1": "Ürünleri Keşfet",
