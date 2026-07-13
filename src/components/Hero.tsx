@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Github, ArrowRight } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center px-6 pt-28 pb-20 overflow-hidden">
       {/* Subtle blue glow background */}
@@ -23,7 +26,7 @@ export default function Hero() {
             >
               <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-white/[0.08] bg-white/[0.03] text-[11px] font-medium text-white/40 tracking-wider uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                Brand Kit v1.0
+                {t("hero.badge")}
               </span>
             </motion.div>
 
@@ -46,7 +49,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="mt-5 text-lg sm:text-xl text-white/60 font-heading font-medium leading-relaxed"
             >
-              A premium design language built for humans and AI.
+              {t("hero.subtitle")}
             </motion.p>
 
             {/* Description */}
@@ -56,8 +59,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
               className="mt-4 max-w-lg text-sm sm:text-base text-white/30 leading-relaxed"
             >
-              Consistent, minimal, and thoughtfully crafted. Every color, every
-              curve, every space — designed with intention.
+              {t("hero.description")}
             </motion.p>
 
             {/* Buttons */}
@@ -71,7 +73,7 @@ export default function Hero() {
                 href="#about"
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-white text-sm font-medium hover:bg-secondary transition-all duration-200"
               >
-                Explore
+                {t("hero.explore")}
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" />
               </a>
               <a
@@ -81,7 +83,7 @@ export default function Hero() {
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/[0.1] text-white/60 text-sm font-medium hover:border-white/[0.2] hover:text-white transition-all duration-200"
               >
                 <Github className="w-4 h-4" />
-                GitHub
+                {t("hero.github")}
               </a>
             </motion.div>
           </div>
@@ -94,9 +96,7 @@ export default function Hero() {
             className="flex-shrink-0"
           >
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
-              {/* Outer glow ring */}
               <div className="absolute inset-0 rounded-full bg-primary/5 blur-[60px]" />
-              {/* Logo container */}
               <div className="relative w-full h-full rounded-full border border-white/[0.06] bg-dark-navy/50 backdrop-blur-sm flex items-center justify-center">
                 <div className="text-center select-none">
                   <div className="font-heading text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-none">
@@ -104,9 +104,8 @@ export default function Hero() {
                     <span className="text-primary">G</span>
                   </div>
                   <div className="mt-3 text-[10px] text-white/20 tracking-[0.35em] uppercase font-medium">
-                    Brand Kit
+                    {t("hero.badge")}
                   </div>
-                  {/* Decorative ring */}
                   <div className="absolute inset-4 rounded-full border border-primary/10" />
                   <div className="absolute inset-8 rounded-full border border-primary/[0.05]" />
                 </div>

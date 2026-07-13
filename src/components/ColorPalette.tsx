@@ -3,18 +3,20 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Check, Copy } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const colors = [
-  { name: "Primary", hex: "#46A3FF" },
-  { name: "Secondary", hex: "#2D8CFF" },
-  { name: "Accent", hex: "#165CC8" },
-  { name: "Dark Navy", hex: "#08182F" },
-  { name: "Background", hex: "#07111F" },
-  { name: "White", hex: "#FFFFFF" },
+  { nameKey: "colors.primary", hex: "#46A3FF" },
+  { nameKey: "colors.secondary", hex: "#2D8CFF" },
+  { nameKey: "colors.accent", hex: "#165CC8" },
+  { nameKey: "colors.darkNavy", hex: "#08182F" },
+  { nameKey: "colors.background", hex: "#07111F" },
+  { nameKey: "colors.white", hex: "#FFFFFF" },
 ];
 
 export default function ColorPalette() {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  const { t } = useLanguage();
 
   const handleCopy = async (hex: string, index: number) => {
     try {
@@ -38,7 +40,7 @@ export default function ColorPalette() {
           className="mb-12"
         >
           <span className="text-xs font-medium tracking-[0.2em] uppercase text-white/30">
-            Color Palette
+            {t("colors.label")}
           </span>
         </motion.div>
 
@@ -51,7 +53,7 @@ export default function ColorPalette() {
             transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-white"
           >
-            Colors
+            {t("colors.title")}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -60,7 +62,7 @@ export default function ColorPalette() {
             transition={{ duration: 0.5, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
             className="mt-3 max-w-xl text-base text-white/40 leading-relaxed"
           >
-            A restrained blue palette. Click any HEX value to copy it.
+            {t("colors.subtitle")}
           </motion.p>
         </div>
 
@@ -89,7 +91,7 @@ export default function ColorPalette() {
               <div className="p-4 flex items-center justify-between">
                 <div>
                   <h3 className="font-heading text-sm font-semibold text-white">
-                    {color.name}
+                    {t(color.nameKey)}
                   </h3>
                   <button
                     onClick={() => handleCopy(color.hex, i)}
@@ -98,7 +100,7 @@ export default function ColorPalette() {
                     {copiedIndex === i ? (
                       <>
                         <Check className="w-3 h-3" />
-                        <span>Copied</span>
+                        <span>{t("colors.copied")}</span>
                       </>
                     ) : (
                       <>

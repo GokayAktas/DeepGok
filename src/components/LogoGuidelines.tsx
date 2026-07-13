@@ -1,38 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Check,
-  X,
-  Square,
-  CircleDot,
-  Blend,
-  Gem,
-  LayoutGrid,
-  Smile,
-  Image,
-  Shirt,
-  Zap,
-  Box,
-} from "lucide-react";
+import { Check, X, Square, CircleDot, Blend, Gem, LayoutGrid, Smile, Image, Shirt, Zap, Box } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
-const doItems = [
-  { icon: Square, text: "One dominant object" },
-  { icon: CircleDot, text: "Rounded geometry" },
-  { icon: Blend, text: "Soft gradients" },
-  { icon: Gem, text: "Premium materials" },
-  { icon: LayoutGrid, text: "Minimal composition" },
+const doKeys = [
+  { icon: Square, key: "guidelines.do1" },
+  { icon: CircleDot, key: "guidelines.do2" },
+  { icon: Blend, key: "guidelines.do3" },
+  { icon: Gem, key: "guidelines.do4" },
+  { icon: LayoutGrid, key: "guidelines.do5" },
 ];
 
-const dontItems = [
-  { icon: Smile, text: "Clipart" },
-  { icon: Image, text: "Emoji style" },
-  { icon: Shirt, text: "Photorealism" },
-  { icon: Zap, text: "Harsh neon" },
-  { icon: Box, text: "Visual clutter" },
+const dontKeys = [
+  { icon: Smile, key: "guidelines.dont1" },
+  { icon: Image, key: "guidelines.dont2" },
+  { icon: Shirt, key: "guidelines.dont3" },
+  { icon: Zap, key: "guidelines.dont4" },
+  { icon: Box, key: "guidelines.dont5" },
 ];
 
 export default function LogoGuidelines() {
+  const { t } = useLanguage();
+
   return (
     <section id="guidelines" className="px-6 py-28">
       <div className="max-w-[1200px] mx-auto">
@@ -45,7 +35,7 @@ export default function LogoGuidelines() {
           className="mb-12"
         >
           <span className="text-xs font-medium tracking-[0.2em] uppercase text-white/30">
-            Logo Guidelines
+            {t("guidelines.label")}
           </span>
         </motion.div>
 
@@ -58,7 +48,7 @@ export default function LogoGuidelines() {
             transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-white"
           >
-            Logo Usage
+            {t("guidelines.title")}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -67,7 +57,7 @@ export default function LogoGuidelines() {
             transition={{ duration: 0.5, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
             className="mt-3 max-w-xl text-base text-white/40 leading-relaxed"
           >
-            Guidelines to keep the brand mark consistent and recognizable.
+            {t("guidelines.subtitle")}
           </motion.p>
         </div>
 
@@ -86,17 +76,17 @@ export default function LogoGuidelines() {
                 <Check className="w-4 h-4 text-emerald-400" />
               </div>
               <span className="font-heading text-base font-semibold text-emerald-400">
-                Do
+                {t("guidelines.do")}
               </span>
             </div>
             <ul className="space-y-3.5">
-              {doItems.map((item) => (
+              {doKeys.map((item) => (
                 <li
-                  key={item.text}
+                  key={item.key}
                   className="flex items-center gap-3 text-sm text-white/50"
                 >
                   <item.icon className="w-4 h-4 text-white/30 flex-shrink-0" />
-                  <span>{item.text}</span>
+                  <span>{t(item.key)}</span>
                 </li>
               ))}
             </ul>
@@ -115,17 +105,17 @@ export default function LogoGuidelines() {
                 <X className="w-4 h-4 text-red-400" />
               </div>
               <span className="font-heading text-base font-semibold text-red-400">
-                Don&apos;t
+                {t("guidelines.dont")}
               </span>
             </div>
             <ul className="space-y-3.5">
-              {dontItems.map((item) => (
+              {dontKeys.map((item) => (
                 <li
-                  key={item.text}
+                  key={item.key}
                   className="flex items-center gap-3 text-sm text-white/50"
                 >
                   <item.icon className="w-4 h-4 text-white/20 flex-shrink-0" />
-                  <span>{item.text}</span>
+                  <span>{t(item.key)}</span>
                 </li>
               ))}
             </ul>

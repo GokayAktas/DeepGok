@@ -3,17 +3,20 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Github } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "DNA", href: "#dna" },
-  { label: "Colors", href: "#colors" },
-  { label: "Guidelines", href: "#guidelines" },
+const navLinkKeys = [
+  { key: "nav.about", href: "#about" },
+  { key: "nav.dna", href: "#dna" },
+  { key: "nav.colors", href: "#colors" },
+  { key: "nav.guidelines", href: "#guidelines" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const { scrollY } = useScroll();
+  const { t } = useLanguage();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 20);
@@ -48,15 +51,16 @@ export default function Navbar() {
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {navLinkKeys.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 className="text-sm text-white/50 hover:text-white transition-colors duration-200"
               >
-                {link.label}
+                {t(link.key)}
               </a>
             ))}
+            <LanguageSwitcher />
             <a
               href="https://github.com"
               target="_blank"
@@ -64,7 +68,7 @@ export default function Navbar() {
               className="flex items-center gap-1.5 text-sm text-white/50 hover:text-white transition-colors duration-200"
             >
               <Github className="w-4 h-4" />
-              <span>GitHub</span>
+              <span>{t("nav.github")}</span>
             </a>
           </div>
 
@@ -78,6 +82,7 @@ export default function Navbar() {
 
 function MobileMenu() {
   const [open, setOpen] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     if (open) {
@@ -89,6 +94,8 @@ function MobileMenu() {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  const handleClick = () => setOpen(false);
 
   return (
     <div className="md:hidden">
@@ -123,31 +130,40 @@ function MobileMenu() {
           className="fixed inset-0 top-0 z-40 bg-background/95 backdrop-blur-xl"
         >
           <div className="flex flex-col items-center justify-center h-full gap-8">
-            {navLinks.map((link, i) => (
+            {navLinkKeys.map((link, i) => (
               <motion.a
                 key={link.href}
                 href={link.href}
-                onClick={() => setOpen(false)}
+                onClick={handleClick}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05, duration: 0.3 }}
                 className="text-2xl font-heading text-white/70 hover:text-white transition-colors"
               >
-                {link.label}
+                {t(link.key)}
               </motion.a>
             ))}
+            <motion.div
+              onClick={handleClick}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.3 }}
+              className="flex justify-center"
+            >
+              <LanguageSwitcher />
+            </motion.div>
             <motion.a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
+              onClick={handleClick}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.3 }}
               className="flex items-center gap-2 text-2xl font-heading text-white/70 hover:text-white transition-colors"
             >
               <Github className="w-6 h-6" />
-              <span>GitHub</span>
+              <span>{t("nav.github")}</span>
             </motion.a>
           </div>
         </motion.div>

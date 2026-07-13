@@ -2,35 +2,34 @@
 
 import { motion } from "framer-motion";
 import { Eye, Crosshair, Crown, Infinity } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const principles = [
   {
     icon: Eye,
-    title: "Recognizable",
-    description:
-      "A distinct visual identity that stands out. The blue-on-dark palette creates an instantly recognizable signature.",
+    titleKey: "dna.card1.title",
+    descKey: "dna.card1.desc",
   },
   {
     icon: Crosshair,
-    title: "Purposeful",
-    description:
-      "Nothing is accidental. Every element has a reason to exist, every pixel serves a clear intent.",
+    titleKey: "dna.card2.title",
+    descKey: "dna.card2.desc",
   },
   {
     icon: Crown,
-    title: "Premium",
-    description:
-      "Refined details, thoughtful spacing, and polished surfaces. Quality that speaks without words.",
+    titleKey: "dna.card3.title",
+    descKey: "dna.card3.desc",
   },
   {
     icon: Infinity,
-    title: "Timeless",
-    description:
-      "Built to last. Classic proportions, restrained choices, and a design language that doesn't chase trends.",
+    titleKey: "dna.card4.title",
+    descKey: "dna.card4.desc",
   },
 ];
 
 export default function DNA() {
+  const { t } = useLanguage();
+
   return (
     <section id="dna" className="px-6 py-28">
       <div className="max-w-[1200px] mx-auto">
@@ -43,7 +42,7 @@ export default function DNA() {
           className="mb-12"
         >
           <span className="text-xs font-medium tracking-[0.2em] uppercase text-white/30">
-            DeepGok DNA
+            {t("dna.label")}
           </span>
         </motion.div>
 
@@ -56,7 +55,7 @@ export default function DNA() {
             transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="font-heading text-3xl sm:text-4xl font-bold tracking-tight text-white"
           >
-            The Principles
+            {t("dna.title")}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -65,7 +64,7 @@ export default function DNA() {
             transition={{ duration: 0.5, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
             className="mt-3 max-w-xl text-base text-white/40 leading-relaxed"
           >
-            Four principles guide every decision in the DeepGok Brand Kit.
+            {t("dna.subtitle")}
           </motion.p>
         </div>
 
@@ -73,7 +72,7 @@ export default function DNA() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {principles.map((item, i) => (
             <motion.div
-              key={item.title}
+              key={item.titleKey}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
@@ -88,10 +87,10 @@ export default function DNA() {
                 <item.icon className="w-5 h-5 text-white/50 group-hover:text-primary transition-colors duration-300" />
               </div>
               <h3 className="font-heading text-lg font-semibold text-white mb-2">
-                {item.title}
+                {t(item.titleKey)}
               </h3>
               <p className="text-sm text-white/40 leading-relaxed">
-                {item.description}
+                {t(item.descKey)}
               </p>
             </motion.div>
           ))}

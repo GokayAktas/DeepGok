@@ -1,6 +1,10 @@
+"use client";
+
 import { Github } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
   const year = new Date().getFullYear();
 
   return (
@@ -10,10 +14,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="text-center sm:text-left">
             <p className="font-heading text-sm font-semibold text-white">
-              DeepGok Brand Kit<span className="text-white/20">™</span>
+              {t("footer.brand")}
             </p>
             <p className="mt-1 text-xs text-white/30">
-              A design language for humans and AI.
+              {t("footer.tagline")}
             </p>
           </div>
 
@@ -28,7 +32,7 @@ export default function Footer() {
               <Github className="w-4 h-4" />
             </a>
             <p className="text-xs text-white/20">
-              &copy; {year} DeepGok. All rights reserved.
+              {t("footer.copyright", { year })}
             </p>
           </div>
         </div>
