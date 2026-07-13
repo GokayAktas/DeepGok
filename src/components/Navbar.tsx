@@ -44,9 +44,16 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#"
-            className="font-heading text-xl font-semibold tracking-tight text-white"
+            className="flex items-center gap-2.5"
           >
-            Deep<span className="text-primary">Gok</span>
+            <img
+              src="/favicon.svg"
+              alt="DeepGok"
+              className="h-7 w-auto"
+            />
+            <span className="font-heading text-lg font-semibold tracking-tight text-white">
+              Deep<span className="text-primary">Gok</span>
+            </span>
           </a>
 
           {/* Desktop Links */}

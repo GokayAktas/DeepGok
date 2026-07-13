@@ -98,17 +98,13 @@ export default function Hero() {
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
               <div className="absolute inset-0 rounded-full bg-primary/5 blur-[60px]" />
               <div className="relative w-full h-full rounded-full border border-white/[0.06] bg-dark-navy/50 backdrop-blur-sm flex items-center justify-center">
-                <div className="text-center select-none">
-                  <div className="font-heading text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-none">
-                    <span className="text-white">D</span>
-                    <span className="text-primary">G</span>
-                  </div>
-                  <div className="mt-3 text-[10px] text-white/20 tracking-[0.35em] uppercase font-medium">
-                    {t("hero.badge")}
-                  </div>
-                  <div className="absolute inset-4 rounded-full border border-primary/10" />
-                  <div className="absolute inset-8 rounded-full border border-primary/[0.05]" />
-                </div>
+                <img
+                  src="/favicon.svg"
+                  alt="DeepGok Brand Kit"
+                  className="w-3/4 h-3/4 object-contain select-none"
+                />
+                <div className="absolute inset-4 rounded-full border border-primary/10" />
+                <div className="absolute inset-8 rounded-full border border-primary/[0.05]" />
               </div>
             </div>
           </motion.div>

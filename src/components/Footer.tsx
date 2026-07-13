@@ -12,13 +12,20 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           {/* Brand */}
-          <div className="text-center sm:text-left">
-            <p className="font-heading text-sm font-semibold text-white">
-              {t("footer.brand")}
-            </p>
-            <p className="mt-1 text-xs text-white/30">
-              {t("footer.tagline")}
-            </p>
+          <div className="flex items-center gap-3 text-center sm:text-left">
+            <img
+              src="/favicon.svg"
+              alt="DeepGok"
+              className="h-8 w-auto"
+            />
+            <div>
+              <p className="font-heading text-sm font-semibold text-white">
+                {t("footer.brand")}
+              </p>
+              <p className="mt-1 text-xs text-white/30">
+                {t("footer.tagline")}
+              </p>
+            </div>
           </div>
 
           {/* GitHub + Copyright */}
