@@ -3,6 +3,13 @@
 import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
 
+const productUrls: Record<string, string> = {
+  gokLang: "https://github.com/GokayAktas/GokLang",
+  gokBall: "https://gokball.vercel.app",
+  gokLeague: "https://gokleague.lovable.app",
+  gokBill: "https://gokbill.lovable.app",
+};
+
 export default function Footer() {
   const { t } = useLanguage();
   const year = new Date().getFullYear();
@@ -41,18 +48,18 @@ export default function Footer() {
               {t("home.footer.products")}
             </h4>
             <ul className="space-y-2.5">
-              <li>
-                <span className="text-sm text-white/40">{t("home.footer.gokLang")}</span>
-              </li>
-              <li>
-                <span className="text-sm text-white/40">{t("home.footer.gokBall")}</span>
-              </li>
-              <li>
-                <span className="text-sm text-white/40">{t("home.footer.gokLeague")}</span>
-              </li>
-              <li>
-                <span className="text-sm text-white/40">{t("home.footer.gokBill")}</span>
-              </li>
+              {["gokLang", "gokBall", "gokLeague", "gokBill"].map((product) => (
+                <li key={product}>
+                  <a
+                    href={productUrls[product]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-white/50 hover:text-white transition-colors duration-200"
+                  >
+                    {t(`home.footer.${product}`)}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -73,7 +80,14 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="text-sm text-white/40">{t("home.footer.docs")}</span>
+                <a
+                  href="https://github.com/GokayAktas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/50 hover:text-white transition-colors duration-200"
+                >
+                  {t("home.footer.docs")}
+                </a>
               </li>
             </ul>
           </div>
@@ -85,10 +99,20 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5">
               <li>
-                <span className="text-sm text-white/40">{t("home.footer.privacy")}</span>
+                <a
+                  href="#"
+                  className="text-sm text-white/50 hover:text-white transition-colors duration-200"
+                >
+                  {t("home.footer.privacy")}
+                </a>
               </li>
               <li>
-                <span className="text-sm text-white/40">{t("home.footer.terms")}</span>
+                <a
+                  href="#"
+                  className="text-sm text-white/50 hover:text-white transition-colors duration-200"
+                >
+                  {t("home.footer.terms")}
+                </a>
               </li>
             </ul>
           </div>

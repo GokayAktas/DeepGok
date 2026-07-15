@@ -32,7 +32,7 @@ export default function Contact() {
               {t("home.contact.github")}
             </a>
             <a
-              href="mailto:hello@deepgok.com"
+              href="mailto:contact.deepgok@gmail.com"
               className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/[0.1] text-white/60 text-sm font-medium hover:border-white/[0.2] hover:text-white transition-all duration-200"
             >
               <Mail className="w-4 h-4" />

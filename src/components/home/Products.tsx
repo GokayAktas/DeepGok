@@ -1,39 +1,49 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Languages,
-  Swords,
-  Trophy,
-  Receipt,
   ArrowRight,
   X,
   CheckCircle2,
+  ExternalLink,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
+import goklangLogo from "../../../icons/goklang_logo.png";
+import gokballLogo from "../../../icons/gokball_logo.png";
+import gokleagueLogo from "../../../icons/gokleague_logo.png";
+import gokbillLogo from "../../../icons/gokbill_logo.png";
+
+const productLinks: Record<string, string> = {
+  gokLang: "https://github.com/GokayAktas/GokLang",
+  gokBall: "https://gokball.vercel.app",
+  gokLeague: "https://gokleague.lovable.app",
+  gokBill: "https://gokbill.lovable.app",
+};
+
 const products = [
   {
-    icon: Languages,
+    image: goklangLogo,
     key: "gokLang",
     status: "gokLangStatus",
     statusColor: "text-yellow-400/80 border-yellow-400/20 bg-yellow-400/5",
   },
   {
-    icon: Swords,
+    image: gokballLogo,
     key: "gokBall",
     status: "gokBallStatus",
     statusColor: "text-blue-400/80 border-blue-400/20 bg-blue-400/5",
   },
   {
-    icon: Trophy,
+    image: gokleagueLogo,
     key: "gokLeague",
     status: "gokLeagueStatus",
     statusColor: "text-emerald-400/80 border-emerald-400/20 bg-emerald-400/5",
   },
   {
-    icon: Receipt,
+    image: gokbillLogo,
     key: "gokBill",
     status: "gokBillStatus",
     statusColor: "text-emerald-400/80 border-emerald-400/20 bg-emerald-400/5",
@@ -45,7 +55,6 @@ export default function Products() {
   const { t } = useLanguage();
 
   const selectedProduct = products.find((p) => p.key === selected);
-  const SelectedIcon = selectedProduct?.icon;
 
   const handleLearnMore = (key: string) => {
     setSelected(selected === key ? null : key);
@@ -77,7 +86,6 @@ export default function Products() {
         {/* Product Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {products.map((product, i) => {
-            const Icon = product.icon;
             const isSelected = selected === product.key;
             return (
               <motion.div
@@ -94,8 +102,12 @@ export default function Products() {
                 onClick={() => handleLearnMore(product.key)}
               >
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-xl bg-white/[0.05] flex items-center justify-center overflow-hidden p-1.5">
+                    <Image
+                      src={product.image}
+                      alt={t(`home.products.${product.key}`)}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <span
                     className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-medium border ${product.statusColor}`}
@@ -144,13 +156,15 @@ export default function Products() {
                 </button>
 
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-                  {/* Left: Icon + Name + Description */}
+                  {/* Left: Image + Name + Description */}
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-                        {SelectedIcon && (
-                          <SelectedIcon className="w-7 h-7 text-primary" />
-                        )}
+                      <div className="w-14 h-14 rounded-2xl bg-white/[0.05] flex items-center justify-center overflow-hidden p-2">
+                        <Image
+                          src={selectedProduct.image}
+                          alt={t(`home.products.${selected}`)}
+                          className="w-full h-full object-contain"
+                        />
                       </div>
                       <div>
                         <h3 className="font-heading text-xl font-semibold text-white">
@@ -169,6 +183,22 @@ export default function Products() {
                     <p className="text-sm text-white/40 leading-relaxed">
                       {t(`home.products.${selected}.detailDesc`)}
                     </p>
+
+                    {/* Product Link */}
+                    <a
+                      href={productLinks[selected]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-white/[0.1] text-white/50 text-xs font-medium hover:border-primary/30 hover:text-primary hover:bg-primary/[0.03] transition-all duration-200 group"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      <span>
+                        {selected === "gokLang" ? "GitHub" : "Website"}{" "}
+                        <span className="opacity-50 text-[10px]">
+                          {productLinks[selected].replace("https://", "")}
+                        </span>
+                      </span>
+                    </a>
                   </div>
 
                   {/* Right: Features List */}
@@ -178,12 +208,18 @@ export default function Products() {
                     </h4>
                     <div className="space-y-3.5">
                       {[1, 2, 3, 4, 5].map((n) => (
-                        <div key={n} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-4 h-4 text-primary/60 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-white/50 leading-relaxed">
+                        <a
+                          key={n}
+                          href={productLinks[selected]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-start gap-3 group cursor-pointer"
+                        >
+                          <CheckCircle2 className="w-4 h-4 text-primary/60 flex-shrink-0 mt-0.5 group-hover:text-primary transition-colors duration-200" />
+                          <span className="text-sm text-white/50 leading-relaxed group-hover:text-white/70 transition-colors duration-200">
                             {t(`home.products.${selected}.detail${n}`)}
                           </span>
-                        </div>
+                        </a>
                       ))}
                     </div>
                   </div>

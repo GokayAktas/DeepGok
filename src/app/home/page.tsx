@@ -7,6 +7,7 @@ import Hero from "@/components/home/Hero";
 import Products from "@/components/home/Products";
 import WhatWeBuild from "@/components/home/WhatWeBuild";
 import WhyDeepGok from "@/components/home/WhyDeepGok";
+import About from "@/components/home/About";
 import BrandKitSection from "@/components/home/BrandKitSection";
 import Vision from "@/components/home/Vision";
 import Contact from "@/components/home/Contact";
@@ -40,6 +41,7 @@ export default function HomePage() {
         <Products />
         <WhatWeBuild />
         <WhyDeepGok />
+        <About />
         <BrandKitSection />
         <Vision />
         <Contact />

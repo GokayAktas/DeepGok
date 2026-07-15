@@ -128,30 +128,30 @@ export const translations: Record<Language, Record<string, string>> = {
     "home.products.keyFeatures": "Key Features",
 
     // Product Details
-    "home.products.gokLang.detail1": "Instant website translation in 100+ languages",
+    "home.products.gokLang.detail1": "Instant website translation in 10+ languages",
     "home.products.gokLang.detail2": "AI-powered natural language processing for accurate translations",
     "home.products.gokLang.detail3": "Seamless integration — works with every website",
     "home.products.gokLang.detail4": "Lightweight extension that won't slow down your browser",
     "home.products.gokLang.detail5": "Privacy-first — no data stored or shared",
     "home.products.gokLang.detailDesc": "GokLang is an intelligent browser extension that breaks down language barriers. Powered by advanced AI, it translates websites in real-time while preserving the original layout and design. Whether you're browsing foreign news, researching global topics, or communicating across borders, GokLang makes the web accessible in your language.",
     "home.products.gokBall.detail1": "Real-time multiplayer matches with friends or players worldwide",
-    "home.products.gokBall.detail2": "Multiple game modes — quick play, tournaments, and custom matches",
-    "home.products.gokBall.detail3": "Competitive ranking system with leaderboards and seasons",
-    "home.products.gokBall.detail4": "Cross-platform play — desktop, tablet, and mobile",
+    "home.products.gokBall.detail2": "Multiple game modes — quick play and custom matches",
+    "home.products.gokBall.detail3": "Skill-based matchmaking for balanced gameplay",
+    "home.products.gokBall.detail4": "Desktop-optimized with smooth 60fps performance",
     "home.products.gokBall.detail5": "Regular content updates with new features and events",
-    "home.products.gokBall.detailDesc": "GokBall is a modern online football game designed for fast-paced fun and competitive play. Jump into quick matches, join tournaments, or create custom games with your friends. With smooth gameplay, vibrant visuals, and a thriving community, GokBall brings the excitement of the pitch to your screen.",
+    "home.products.gokBall.detailDesc": "GokBall is a modern online football game designed for fast-paced fun and competitive play. Jump into quick matches or create custom games with your friends. With smooth gameplay, vibrant visuals, and a thriving community, GokBall brings the excitement of the pitch to your screen.",
     "home.products.gokLeague.detail1": "Create and manage leagues, tournaments, and seasons",
     "home.products.gokLeague.detail2": "Automated scheduling, scoring, and standings",
     "home.products.gokLeague.detail3": "Live leaderboards, statistics, and team profiles",
-    "home.products.gokLeague.detail4": "Team and player management with role-based access",
-    "home.products.gokLeague.detail5": "Integrated payment processing for registration fees",
+    "home.products.gokLeague.detail4": "Detailed team and player profiles with statistics",
+    "home.products.gokLeague.detail5": "Communication tools for teams and organizers",
     "home.products.gokLeague.detailDesc": "GokLeague is a comprehensive platform for organizing and managing sports leagues and tournaments. From automated scheduling to live standings and team communication, GokLeague handles the complexity so you can focus on the game. Built for clubs, schools, and professional organizations alike.",
-    "home.products.gokBill.detail1": "Create and send professional invoices in seconds",
+    "home.products.gokBill.detail1": "Track and manage payments with ease",
     "home.products.gokBill.detail2": "Track payments, overdue bills, and payment history",
     "home.products.gokBill.detail3": "Manage expenses, categories, and budgets",
-    "home.products.gokBill.detail4": "Customer management with contact history and notes",
-    "home.products.gokBill.detail5": "Reports, analytics, and export options",
-    "home.products.gokBill.detailDesc": "GokBill is a straightforward billing and invoice management solution designed for small businesses and freelancers. Create professional invoices, track payments, manage expenses, and get clear financial insights — all in one clean, intuitive interface. No complexity, just the tools you need.",
+    "home.products.gokBill.detail4": "Add custom notes to any invoice",
+    "home.products.gokBill.detail5": "Dashboard with clear financial overview",
+    "home.products.gokBill.detailDesc": "GokBill is a straightforward billing and invoice management solution designed for small businesses and freelancers. Track payments, manage expenses, add notes to invoices, and get clear financial insights — all in one clean, intuitive interface. No complexity, just the tools you need.",
 
     // Home What We Build
     "home.what.label": "Expertise",
@@ -196,6 +196,12 @@ export const translations: Record<Language, Record<string, string>> = {
     "home.vision.statement": "Building software that people love to use every day.",
     "home.vision.desc":
       "Our long-term vision is to create high-quality software that is recognized and used by millions around the world. We are building a future where technology is intuitive, accessible, and truly helpful.",
+
+    // Home About
+    "home.about.label": "About",
+    "home.about.title": "Who We Are",
+    "home.about.description": "DeepGok is a creative technology studio driven by a passion for building intelligent software, AI-powered tools, and digital experiences. We believe in simplicity, performance, and thoughtful design — crafting products that make technology more accessible and enjoyable for everyone. From browser extensions to game platforms, every project reflects our commitment to quality and innovation.",
+    "home.about.cta": "Explore Products",
 
     // Home Contact
     "home.contact.title": "Let's build the future together.",
@@ -308,6 +314,14 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Home Navbar
     "home.nav.home": "Ana Sayfa",
+
+    // Home About
+    "home.about.label": "Hakkında",
+    "home.about.title": "Biz Kimiz",
+    "home.about.description": "DeepGok, akıllı yazılımlar, yapay zeka destekli araçlar ve dijital deneyimler üretme tutkusuyla hareket eden yaratıcı bir teknoloji stüdyosudur. Sadelik, performans ve düşünülmüş tasarıma inanıyor, teknolojiyi herkes için daha erişilebilir ve keyifli kılan ürünler üretiyoruz. Tarayıcı eklentilerinden oyun platformlarına kadar her proje, kalite ve yeniliğe olan bağlılığımızı yansıtır.",
+    "home.about.cta": "Ürünleri Keşfet",
+
+    // Home Hero
     "home.nav.products": "Ürünler",
     "home.nav.brandKit": "Marka Kiti",
     "home.nav.about": "Hakkında",
@@ -348,30 +362,30 @@ export const translations: Record<Language, Record<string, string>> = {
     "home.products.keyFeatures": "Öne Çıkan Özellikler",
 
     // Product Details
-    "home.products.gokLang.detail1": "100'den fazla dilde anında web sitesi çevirisi",
+    "home.products.gokLang.detail1": "10'dan fazla dilde anında web sitesi çevirisi",
     "home.products.gokLang.detail2": "Doğru çeviriler için yapay zeka destekli doğal dil işleme",
     "home.products.gokLang.detail3": "Sorunsuz entegrasyon — her web sitesiyle çalışır",
     "home.products.gokLang.detail4": "Tarayıcınızı yavaşlatmayan hafif eklenti",
     "home.products.gokLang.detail5": "Gizlilik odaklı — hiçbir veri depolanmaz veya paylaşılmaz",
     "home.products.gokLang.detailDesc": "GokLang, dil engellerini ortadan kaldıran akıllı bir tarayıcı eklentisidir. Gelişmiş yapay zeka ile desteklenen eklenti, web sitelerini gerçek zamanlı olarak çevirirken orijinal düzeni ve tasarımı korur. İster yabancı haberler okuyun, ister küresel konuları araştırın — GokLang web'i sizin dilinizde erişilebilir kılar.",
     "home.products.gokBall.detail1": "Arkadaşlarınızla veya dünyanın dört bir yanındaki oyuncularla gerçek zamanlı maçlar",
-    "home.products.gokBall.detail2": "Çoklu oyun modları — hızlı oyun, turnuvalar ve özel maçlar",
-    "home.products.gokBall.detail3": "Liderlik tabloları ve sezonlarla rekabetçi sıralama sistemi",
-    "home.products.gokBall.detail4": "Çapraz platform desteği — masaüstü, tablet ve mobil",
+    "home.products.gokBall.detail2": "Çoklu oyun modları — hızlı oyun ve özel maçlar",
+    "home.products.gokBall.detail3": "Beceri tabanlı eşleştirme ile dengeli oyun deneyimi",
+    "home.products.gokBall.detail4": "Masaüstü odaklı, akıcı 60fps performans",
     "home.products.gokBall.detail5": "Yeni özellikler ve etkinliklerle düzenli içerik güncellemeleri",
-    "home.products.gokBall.detailDesc": "GokBall, hızlı tempolu eğlence ve rekabetçi oyun için tasarlanmış modern bir çevrimiçi futbol oyunudur. Hızlı maçlara atlayın, turnuvalara katılın veya arkadaşlarınızla özel oyunlar oluşturun. Akıcı oynanışı, canlı görselleri ve gelişen topluluğuyla GokBall, sahanın heyecanını ekranınıza taşır.",
+    "home.products.gokBall.detailDesc": "GokBall, hızlı tempolu eğlence ve rekabetçi oyun için tasarlanmış modern bir çevrimiçi futbol oyunudur. Hızlı maçlara atlayın veya arkadaşlarınızla özel oyunlar oluşturun. Akıcı oynanışı, canlı görselleri ve gelişen topluluğuyla GokBall, sahanın heyecanını ekranınıza taşır.",
     "home.products.gokLeague.detail1": "Lig, turnuva ve sezon oluşturma ve yönetme",
     "home.products.gokLeague.detail2": "Otomatik programlama, puanlama ve sıralama",
     "home.products.gokLeague.detail3": "Canlı liderlik tabloları, istatistikler ve takım profilleri",
-    "home.products.gokLeague.detail4": "Rol tabanlı erişimle takım ve oyuncu yönetimi",
-    "home.products.gokLeague.detail5": "Kayıt ücretleri için entegre ödeme işleme",
+    "home.products.gokLeague.detail4": "Detaylı takım ve oyuncu profilleri ile istatistikler",
+    "home.products.gokLeague.detail5": "Takımlar ve organizatörler için iletişim araçları",
     "home.products.gokLeague.detailDesc": "GokLeague, spor ligleri ve turnuvaları düzenlemek için kapsamlı bir platformdur. Otomatik programlamadan canlı sıralamalara ve takım iletişimine kadar GokLeague, karmaşıklığı üstlenir ve sizin oyuna odaklanmanızı sağlar. Kulüpler, okullar ve profesyonel organizasyonlar için tasarlanmıştır.",
-    "home.products.gokBill.detail1": "Saniyeler içinde profesyonel fatura oluşturma ve gönderme",
+    "home.products.gokBill.detail1": "Ödemeleri kolaylıkla takip etme ve yönetme",
     "home.products.gokBill.detail2": "Ödemeleri, gecikmiş faturaları ve ödeme geçmişini takip etme",
     "home.products.gokBill.detail3": "Gider, kategori ve bütçe yönetimi",
-    "home.products.gokBill.detail4": "İletişim geçmişi ve notlar ile müşteri yönetimi",
-    "home.products.gokBill.detail5": "Raporlar, analizler ve dışa aktarma seçenekleri",
-    "home.products.gokBill.detailDesc": "GokBill, küçük işletmeler ve serbest çalışanlar için tasarlanmış basit bir fatura ve envanter yönetim çözümüdür. Profesyonel faturalar oluşturun, ödemeleri takip edin, giderleri yönetin ve net finansal içgörüler elde edin — hepsi tek bir temiz ve sezgisel arayüzde. Karmaşıklık yok, sadece ihtiyacınız olan araçlar.",
+    "home.products.gokBill.detail4": "Faturalara özel not ekleme",
+    "home.products.gokBill.detail5": "Net finansal görünüm ile gösterge paneli",
+    "home.products.gokBill.detailDesc": "GokBill, küçük işletmeler ve serbest çalışanlar için tasarlanmış basit bir fatura ve envanter yönetim çözümüdür. Ödemeleri takip edin, giderleri yönetin, faturalara not ekleyin ve net finansal içgörüler elde edin — hepsi tek bir temiz ve sezgisel arayüzde. Karmaşıklık yok, sadece ihtiyacınız olan araçlar.",
 
     // Home What We Build
     "home.what.label": "Uzmanlık",
