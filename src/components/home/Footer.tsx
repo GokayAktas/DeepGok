@@ -81,9 +81,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com/GokayAktas"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/documentation"
                   className="text-sm text-white/50 hover:text-white transition-colors duration-200"
                 >
                   {t("home.footer.docs")}
@@ -100,7 +98,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               <li>
                 <a
-                  href="#"
+                  href="/privacy-policy"
                   className="text-sm text-white/50 hover:text-white transition-colors duration-200"
                 >
                   {t("home.footer.privacy")}
@@ -108,7 +106,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/terms-of-service"
                   className="text-sm text-white/50 hover:text-white transition-colors duration-200"
                 >
                   {t("home.footer.terms")}

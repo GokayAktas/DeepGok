@@ -33,10 +33,10 @@ export default function Contact() {
             </a>
             <a
               href="mailto:contact.deepgok@gmail.com"
-              className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/[0.1] text-white/60 text-sm font-medium hover:border-white/[0.2] hover:text-white transition-all duration-200"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/[0.1] text-white/60 text-sm font-medium hover:border-white/[0.2] hover:text-white transition-all duration-200"
             >
               <Mail className="w-4 h-4" />
-              {t("home.contact.email")}
+              contact.deepgok@gmail.com
             </a>
           </div>
         </motion.div>

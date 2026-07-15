@@ -222,8 +222,8 @@ export const translations: Record<Language, Record<string, string>> = {
     "home.footer.github": "GitHub",
     "home.footer.docs": "Documentation",
     "home.footer.legal": "Legal",
-    "home.footer.privacy": "Privacy",
-    "home.footer.terms": "Terms",
+    "home.footer.privacy": "Privacy Policy",
+    "home.footer.terms": "Terms of Service",
     "home.footer.copyright": "© {year} DeepGok. All rights reserved.",
   },
 
@@ -450,8 +450,8 @@ export const translations: Record<Language, Record<string, string>> = {
     "home.footer.github": "GitHub",
     "home.footer.docs": "Dokümantasyon",
     "home.footer.legal": "Yasal",
-    "home.footer.privacy": "Gizlilik",
-    "home.footer.terms": "Koşullar",
+    "home.footer.privacy": "Gizlilik Politikası",
+    "home.footer.terms": "Hizmet Koşulları",
     "home.footer.copyright": "© {year} DeepGok. Tüm hakları saklıdır.",
   },
 };

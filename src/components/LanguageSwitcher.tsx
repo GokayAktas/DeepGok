@@ -14,7 +14,7 @@ export default function LanguageSwitcher() {
     >
       <Languages className="w-3.5 h-3.5" />
       <span className="text-xs font-medium uppercase tracking-wide">
-        {lang === "en" ? "TR" : "EN"}
+        {lang === "en" ? "EN" : "TR"}
       </span>
     </button>
   );

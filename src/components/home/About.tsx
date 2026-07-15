@@ -66,20 +66,7 @@ export default function About() {
               {t("home.about.description")}
             </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: 0.26, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-8 flex flex-wrap items-center gap-4 justify-center lg:justify-start"
-            >
-              <a
-                href="#products"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary/10 border border-primary/20 text-primary text-sm font-medium hover:bg-primary/20 transition-all duration-200"
-              >
-                {t("home.about.cta")}
-              </a>
-            </motion.div>
+
           </div>
         </div>
       </div>
