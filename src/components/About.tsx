@@ -1,7 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { Palette } from "lucide-react";
+import { ArrowLeft, Palette } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function About() {
@@ -16,8 +17,15 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-12"
+          className="mb-12 flex flex-wrap items-center gap-3"
         >
+          <Link
+            href="/home"
+            className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-3 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white/50 transition hover:border-white/[0.16] hover:text-white"
+          >
+            <ArrowLeft className="h-3.5 w-3.5" />
+            Home
+          </Link>
           <span className="text-xs font-medium tracking-[0.2em] uppercase text-white/30">
             {t("about.label")}
           </span>

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "DeepGok — Infinite Depth. Infinite Possibilities.",
+  title: "DeepGok",
   description:
     "We create intelligent software, AI-powered tools and digital experiences that make technology simpler for everyone.",
   openGraph: {
-    title: "DeepGok — Infinite Depth. Infinite Possibilities.",
+    title: "DeepGok",
     description:
       "We create intelligent software, AI-powered tools and digital experiences that make technology simpler for everyone.",
     type: "website",
